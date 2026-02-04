@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rancho Obando | Alquiler por Días</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS modular -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <!-- JS modular -->
+    <script type="module" src="js/app.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-swimming-pool"></i>
+                <span>Rancho Obando</span>
+            </a>
+
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#el-rancho">El Rancho</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#precios">Precios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <h1>Tu Escape Perfecto en la Naturaleza</h1>
+            <p>Rancho completo con piscina y 2 habitaciones - Alquiler exclusivo por días. Disfruta de privacidad total
+                y descanso absoluto.</p>
+
+            <!-- Booking Widget -->
+            <div class="booking-widget">
+                <form class="booking-form" id="bookingForm">
+                    <div class="form-group">
+                        <label for="checkin">Fecha de Llegada</label>
+                        <input type="date" id="checkin" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="checkout">Fecha de Salida</label>
+                        <input type="date" id="checkout" class="form-control" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="days">Noches de Estancia</label>
+                        <input type="number" id="days" class="form-control" min="1" value="2" readonly>
+                        <small class="helper-text">Calculado automáticamente</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="totalPrice">Precio Total Estimado</label>
+                        <div class="price-box">
+                            <span class="currency">₡</span><span id="totalPrice">90,000</span> CRC
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-calendar-check"></i> Reservar Ahora
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Ranch Info Section -->
+        <section id="el-rancho">
+            <div class="section-title">
+                <h2>Nuestro Rancho</h2>
+                <p>Un espacio íntimo y acogedor para descansar y desconectar</p>
+            </div>
+
+            <div class="ranch-info">
+                <div class="ranch-description">
+                    <h2>Rancho Obando</h2>
+                    <p>Un rancho disponible para alquiler exclusivo por días. Perfecto para actividades,
+                        familias pequeñas o grupos de amigos que buscan privacidad y contacto con la naturaleza.</p>
+
+                    <p>La propiedad incluye un rancho principal con 2 habitaciones, baño completo, cocina
+                        equipada, sala de estar y una piscina privada rodeada de jardines.</p>
+
+                    <div class="ranch-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-bed"></i>
+                            <span>2 habitaciones con camarotes</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-fire"></i>
+                            <span>Zona de parrilla</span>
+                        </div>
+
+                        <div class="highlight">
+                            <i class="fas fa-swimming-pool"></i>
+                            <span>Piscina privada </span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-utensils"></i>
+                            <span>Cocina completamente equipada, se puede cocinar tanto con lena como con gas.</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-shower"></i>
+                            <span>Baños con ducha</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-wifi"></i>
+                            <span>WiFi de alta velocidad</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-car"></i>
+                            <span>Estacionamiento privado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ranch-image">
+                    <img src="assets/Logo.jpeg"
+                        alt="Casa del Rancho Obando">
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section" id="galeria">
+            <div class="section-title">
+                <h2>Galería</h2>
+                <p>Conoce nuestras instalaciones</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/f1.jpeg" alt="Vista general del rancho">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/f2.jpeg" alt="Piscina del rancho">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/f3.jpeg" alt="Área social del rancho">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/f4.jpeg" alt="Habitación principal">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/f5.jpeg" alt="Segunda habitación">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/f6.jpeg" alt="Cocina equipada del rancho">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/f7.jpeg" alt="Jardines y áreas verdes">
+                </div>
+                <div class="gallery-item">
+                    <img src="assets/f8.jpeg" alt="Vista nocturna del rancho">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="actividades">
+            <div class="section-title">
+                <h2>¿Qué Incluye?</h2>
+                <p>Todo lo que necesitas para una estancia perfecta</p>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Rancho Completo</h3>
+                    <p>2 habitaciones, baño, cocina equipada, sala de estar y comedor. Capacidad para hasta 20 personas.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-swimming-pool"></i>
+                    </div>
+                    <h3>Piscina Privada</h3>
+                    <p>Piscina grande de uso exclusivo, rodeada de jardín. Equipada con reposeras y sombrilla.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Cocina Equipada</h3>
+                    <p>Cocina completa con refrigeradora, congelador, microondas, cafetera y todos los utensilios necesarios.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Zona de Parrilla</h3>
+                    <p>Área equipada para asados y actividades en grupo. Ideal para reuniones familiares y eventos de un día.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <h3>Áreas Verdes</h3>
+                    </p> Amplio lugar y zonas verdes para relajarse, jugar y disfrutar de la naturaleza.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing-section" id="precios">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Precios en Colones</h2>
+                    <p>Precio fijo por día - Rancho completo para hasta 20 personas</p>
+                </div>
+
+                <div class="pricing-container">
+                    <div class="pricing-card">
+                        <h3>Rancho Completo por Día</h3>
+                        <p>Incluye cuartos con 2 habitaciones, piscina privada y todas las instalaciones</p>
+
+                        <div class="price"><span class="currency">₡</span>45,000<span class="price-suffix">/día</span>
+                        </div>
+                        <div class="price-period">Precio fijo por el rancho completo (no por persona)</div>
+
+                        <ul class="price-features">
+                            <li><i class="fas fa-check"></i> Rancho con 2 habitaciones (6 personas)</li>
+                            <li><i class="fas fa-check"></i> Piscina privada de uso exclusivo</li>
+                            <li><i class="fas fa-check"></i> Cocina completamente equipada</li>
+                            <li><i class="fas fa-check"></i> WiFi de alta velocidad</li>
+                            <li><i class="fas fa-check"></i> Estacionamiento privado</li>
+                            <li><i class="fas fa-check"></i> Check-in: 10:00 hrs / Check-out: 22:00 hrs</li>
+                        </ul>
+
+                        <button class="btn btn-primary" id="bookNowBtn">
+                            <i class="fas fa-calendar-alt"></i> Reservar Ahora
+                        </button>
+
+                        <div class="special-prices">
+                            <h4>Precios Especiales</h4>
+                            <p><strong>Estadía larga:</strong> ₡35,000 por día Completo</p>
+                            <p><strong>Actividades de un solo dia</strong> ₡40,000 por el día </p>
+                            <p><strong>Depósito de seguridad:</strong> ₡25,000 (reembolsable)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="section-title">
+                <h2>Lo Que Dicen Nuestros Huéspedes</h2>
+                <p>Experiencias reales en Rancho Obando</p>
+            </div>
+
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Pasamos 2 días en el rancho y fue increíble. La piscina es
+                        espectacular, la casa muy cómoda y el precio excelente para lo que ofrece. Totalmente
+                        recomendado para familias pequeñas que buscan descanso."</p>
+                    <div class="testimonial-author">- Familia Vargas</div>
+                    <div class="rating">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+<section class="location-section" id="ubicacion">
+    <div class="container">
+        <div class="section-title">
+            <h2>Ubicación</h2>
+            <p>Cómo llegar a Rancho Obando</p>
+        </div>
+
+        <div class="location-grid">
+            <div class="location-card">
+                <h3>Rancho Obando</h3>
+
+                <ul class="location-list">
+                    <li><i class="fas fa-map-marker-alt"></i> La Tigra de San Carlos, Alajuela, Costa Rica</li>
+                    <li><i class="fas fa-car"></i> Acceso en carro / parqueo privado</li>
+                    <li><i class="fas fa-clock"></i> Check-in: 10:00 | Check-out: 22:00</li>
+                </ul>
+
+                <a class="btn btn-primary location-btn" target="_blank" rel="noopener"
+                    href="https://maps.app.goo.gl/xhgBoQ3sC7bUntHU8">
+                    <i class="fas fa-location-arrow"></i> Abrir en Google Maps
+                </a>
+
+                <p class="location-note">
+                    Tip: abrí el mapa para ver la ruta y el tiempo estimado según tu ubicación.
+                </p>
+            </div>
+
+            <div class="location-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1628.6450074988827!2d-84.58223133751716!3d10.326042249792934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa06d003a3b81a5%3A0xa985628703850cbe!2sRancho%20Obando!5e1!3m2!1ses-419!2scr!4v1770177106282!5m2!1ses-419!2scr"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Rancho Obando</h3>
+                    <p>Un espacio perfecto para desconectar. Rancho completo con piscina privada y 2 habitaciones.
+                        Alquiler exclusivo por días.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/50688888888" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="mailto:info@ranchobando.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Información</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> La Tigra De San Carlos, Alajuela, Costa Rica</li>
+                        <li><i class="fas fa-phone"></i> +506 8888-8888</li>
+                        <li><i class="fas fa-clock"></i> Check-in: 10:00 | Check-out: 22:00</li>
+                        <li><i class="fas fa-users"></i> Capacidad: hasta 20 personas</li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Reservar ahora</a></li>
+                        <li><a href="#el-rancho">El Rancho</a></li>
+                        <li><a href="#galeria">Fotos</a></li>
+                        <li><a href="#precios">Precios en Colones</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>¿Tienes preguntas?</h3>
+                    <p>Contáctanos para consultar disponibilidad, precios especiales o resolver cualquier duda.</p>
+                    <button class="btn" id="contactBtn" style="margin-top: 10px; width: 100%;">
+                        <i class="fas fa-comment-alt"></i> Enviar Mensaje
+                    </button>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 Rancho Obando. Alquiler por días del rancho completo. Precios en colones
+                    costarricenses (CRC).</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <h2>Confirmar Reserva del Rancho</h2>
+            <div id="bookingSummary"></div>
+            <form id="finalBookingForm">
+                <div class="form-group">
+                    <label for="fullName">Nombre Completo *</label>
+                    <input type="text" id="fullName" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Teléfono *</label>
+                    <input type="tel" id="phone" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="groupSize">Número de Personas *</label>
+                    <input type="number" id="groupSize" class="form-control" min="1" max="5" value="2" required>
+                    <small>Máximo 5 personas (2 habitaciones)</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="purpose">Propósito de la Visita</label>
+                    <select id="purpose" class="form-control">
+                        <option value="vacaciones">Vacaciones en familia</option>
+                        <option value="pareja">Escapada de pareja</option>
+                        <option value="amigos">Viaje con amigos</option>
+                        <option value="descanso">Descanso y desconexión</option>
+                        <option value="otros">Otros</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="specialRequests">Solicitudes Especiales</label>
+                    <textarea id="specialRequests" class="form-control" rows="3"
+                        placeholder="¿Necesitas algo específico?"></textarea>
+                </div>
+
+                <div class="terms-box">
+                    <p class="terms-title">Términos y Condiciones</p>
+                    <div class="terms-scroll">
+                        <p>1. Depósito de seguridad de ₡25,000 se reembolsa 48 hrs después del check-out.</p>
+                        <p>2. Check-in a partir de las 14:00 hrs | Check-out antes de las 12:00 hrs.</p>
+                        <p>3. No se permiten fiestas ni eventos con música alta.</p>
+                        <p>4. El rancho debe dejarse en buen estado de limpieza.</p>
+                        <p>5. Precios en colones costarricenses (CRC).</p>
+                    </div>
+                    <div class="terms-accept">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">Acepto los términos y condiciones</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <i class="fas fa-check-circle"></i> Confirmar Reserva
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeContactModal">&times;</button>
+            <h2>Contáctanos</h2>
+            <p>Envíanos un mensaje para consultar disponibilidad, precios especiales o cualquier pregunta sobre el
+                rancho.</p>
+
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="contactName">Nombre *</label>
+                    <input type="text" id="contactName" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactEmail">Correo Electrónico *</label>
+                    <input type="email" id="contactEmail" class="form-control" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactPhone">Teléfono</label>
+                    <input type="tel" id="contactPhone" class="form-control" placeholder="+506 _______">
+                </div>
+
+                <div class="form-group">
+                    <label for="contactMessage">Mensaje *</label>
+                    <textarea id="contactMessage" class="form-control" rows="5" required
+                        placeholder="Por favor, incluye fechas de interés y número de personas..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
